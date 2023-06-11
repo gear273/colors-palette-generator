@@ -36,6 +36,15 @@ function create_color_boxes(colors, parent) {
 
         div.addEventListener("click", function () {
             navigator.clipboard.writeText(color);
+
+            const messageElement = document.createElement('p');
+            messageElement.textContent = "Copied!";
+            div.appendChild(messageElement);
+
+            setTimeout(() => {
+                messageElement.remove();
+            }, 2500)
+
         });
 
         const span = document.createElement("span");

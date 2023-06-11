@@ -1,60 +1,81 @@
 html,
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .container {
-    background-color: black;
-    width: 100%;
-    height: 100vh;
-    display: flex;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  display: flex;
 }
 
 .color {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    cursor: pointer;
-    transition: 0.2s opacity;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  transition: 0.2s opacity;
 }
 
 .color:active {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .color span {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: white;
-    text-shadow: 1px 1px black;
-    font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-family: 'Lato', serif;
+  font-weight: 100;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.color:hover span {
+  transform: opacity 0.2s;
+  opacity: 1;
 }
 
 #form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#form input[type="text"] {
-    font-size: 2rem;
-    outline: 0;
-    background-color: #f2f2f2;
-    border: 2px solid white;
-    padding: 20px;
+#form input[type='text'] {
+  font-size: 2rem;
+  outline: 0;
+  background-color: #f2f2f2;
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 10px;
+}
+#form input:hover {
+  border: 2px solid #4caf50;
 }
 
 .btn {
-    background-color: #4caf50;
-    color: white;
-    border: 2px solid white;
-    padding: 20px;
-    font-size: 2rem;
-    transition: 0.2 opacity;
+  border-radius: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: 2px solid white;
+  padding: 20px;
+  font-size: 2rem;
+  transition: 0.2 opacity;
 }
 
 .btn:hover {
-    opacity: 0.8;
+  opacity: 0.8;
+}
+
+p {
+  color: white;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  top: 10%;
 }
