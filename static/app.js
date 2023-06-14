@@ -23,6 +23,7 @@ function get_colors() {
     .then((response) => response.json())
     .then((data) => {
       const colors = data.colors;
+      console.log(colors);
       const container = document.querySelector(".container");
       create_color_boxes(colors, container);
     });
